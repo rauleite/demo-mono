@@ -1,0 +1,26 @@
+{
+  "name": "sayhi",
+  "packageManager": "yarn@3.0.1",
+  "version": "1.0.0",
+  "main": "dist/src/sayhi",
+  "types": "dist/src/sayhi",
+  "scripts": {
+    "start": "node dist/src/sayhi.js",
+    "lint": "eslint src/*.ts",
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rm -r dist/*"
+  },
+  "dependencies": {
+    "shared": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5"
+  }
+}

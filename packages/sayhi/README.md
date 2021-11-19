@@ -1,0 +1,1 @@
+This package depends on the `shared` package.
