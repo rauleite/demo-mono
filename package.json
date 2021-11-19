@@ -1,13 +1,14 @@
 {
-    "name": "semaphore-demo-monorepo-typescript",
+    "name": "monorepo",
     "packageManager": "yarn@3.0.1",
     "private": true,
     "workspaces": [
         "packages/*"
     ],
     "scripts": {
-        "build": "yarn workspaces foreach run build",
-        "start": "yarn workspace sayhi run start"
+        "build": "yarn workspaces foreach -v --topological --since run build",
+        "start": "yarn workspace sayhi run start",
+        "clean": "yarn workspaces foreach -v --parallel run clean"
     },
     "devDependencies": {
         "typescript": "^4.3.5"

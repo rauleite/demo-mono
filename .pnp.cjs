@@ -19,7 +19,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "semaphore-demo-monorepo-typescript",
+        "name": "monorepo",
         "reference": "workspace:."
       },
       {
@@ -34,8 +34,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["monorepo", ["workspace:."]],
       ["sayhi", ["workspace:packages/sayhi"]],
-      ["semaphore-demo-monorepo-typescript", ["workspace:."]],
       ["shared", ["workspace:packages/shared"]]
     ],
     "fallbackPool": [
@@ -4426,6 +4426,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["monorepo", [
+        ["workspace:.", {
+          "packageLocation": "./",
+          "packageDependencies": [
+            ["monorepo", "workspace:."],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["ms", [
         ["npm:2.1.2", {
           "packageLocation": "./.yarn/cache/ms-npm-2.1.2-ec0c1512ff-673cdb2c31.zip/node_modules/ms/",
@@ -5038,16 +5048,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:7f8833456d7971cb40bc88ce88a3fca8a38a3beff2c2ed9f25a899ccaa6cc8d105ed3590270edf5be80cf39d6ef30878f3561f0c731b2754b4b2da856dd28799#npm:27.0.6"],
             ["shared", "workspace:packages/shared"],
             ["ts-jest", "virtual:7f8833456d7971cb40bc88ce88a3fca8a38a3beff2c2ed9f25a899ccaa6cc8d105ed3590270edf5be80cf39d6ef30878f3561f0c731b2754b4b2da856dd28799#npm:27.0.5"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
-      ["semaphore-demo-monorepo-typescript", [
-        ["workspace:.", {
-          "packageLocation": "./",
-          "packageDependencies": [
-            ["semaphore-demo-monorepo-typescript", "workspace:."],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",

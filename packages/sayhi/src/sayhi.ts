@@ -1,4 +1,4 @@
-import { hi } from 'shared';
+import {hi} from 'shared';
 
 export function getMessage(): string {
     return hi();

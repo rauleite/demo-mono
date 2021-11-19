@@ -3483,6 +3483,14 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"monorepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "monorepo@workspace:."
+  dependencies:
+    typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
 "ms@npm:2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
@@ -4010,14 +4018,6 @@ resolve@^1.20.0:
     jest: ^27.0.6
     shared: 1.0.0
     ts-jest: ^27.0.5
-    typescript: ^4.3.5
-  languageName: unknown
-  linkType: soft
-
-"semaphore-demo-monorepo-typescript@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "semaphore-demo-monorepo-typescript@workspace:."
-  dependencies:
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
